@@ -2,6 +2,13 @@ name: CI
 
 on:
   workflow_dispatch:
+    inputs:
+      target:
+        description: 'Target codename to build'
+        required: false
+        type: string
+        default: 'b2q'
+        
   pull_request:
   push:
     branches:
